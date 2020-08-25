@@ -1,6 +1,7 @@
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
+from django.template.defaultfilters import lower
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, \
 	DeleteView
@@ -130,7 +131,7 @@ class Search(GenreYear, ListView):
 	paginate_by = 2
 
 	def get_queryset(self):
-		return Movie.objects.filter(title__icontains=self.request.GET.get("q"))
+		return Movie.objects.filter(title__contains=self.request.GET.get("q"))
 
 	def get_context_data(self, *args, **kwargs):
 		context = super().get_context_data(*args, **kwargs)
@@ -145,7 +146,7 @@ class CategoryView(GenreYear, ListView):
 	slug_field = 'url'
 
 	def get_queryset(self):
-		return Movie.objects.filter(category__url=self.kwargs['slug'])
+		return Movie.objects.filter(category__url=self.kwargs['slug']).order_by('-id')
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)

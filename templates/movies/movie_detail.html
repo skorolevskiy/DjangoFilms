@@ -36,14 +36,14 @@
                     <span>
                         <b>Режиссер:</b>
                         {% for director in movie.directors.all %}
-                            <a href="{{ director.get_absolute_url }}">{{ director.name }}</a>
+                            <a href="{{ director.get_absolute_url }}">{{ director.name }}{% if not forloop.last %}, {% else %}{% endif %}</a>
                         {% endfor %}
                     </span></li>
                 <li style="list-style: none">
                     <span>
                         <b>Актеры:</b>
                         {% for actor in movie.actors.all %}
-                            <a href="{{ actor.get_absolute_url }}">{{ actor.name }}</a>
+                            <a href="{{ actor.get_absolute_url }}">{{ actor.name }}{% if not forloop.last %}, {% else %}{% endif %}</a>
                         {% endfor %}
                     </span>
                 </li>
@@ -51,7 +51,7 @@
                     <span>
                         <b>Жанр:</b>
                         {% for genre in movie.genres.all %}
-                            {{ genre.name }}
+                            {{ genre.name }}{% if not forloop.last %}, {% else %}{% endif %}
                         {% endfor %}
                     </span>
                 </li>
