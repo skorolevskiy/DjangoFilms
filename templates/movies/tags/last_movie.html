@@ -4,7 +4,7 @@
     {% for movie in last_movies %}
     <a href="{{ movie.get_absolute_url }}" class="special-sec1 row mt-3 editContent">
         <div class="img-deals col-md-4">
-            <img src="{{ movie.poster.url }}" class="img-fluid" alt="">
+            <img src="{{ movie.poster.url }}" class="img-fluid rounded" alt="">
         </div>
         <div class="img-deal1 col-md-4">
             <h3 class="editContent">{{ movie.title }}</h3>

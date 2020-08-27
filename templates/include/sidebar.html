@@ -27,14 +27,14 @@
         <h3 class="sear-head editContent" >Год</h3>
         <ul class="w3layouts-box-list">
             {% for movie in view.get_years %}
-                <li class="editContent" >
-                    <input type="checkbox" class="checked" name="year" id="year-{{ movie.year }}" value="{{ movie.year }}">
-                    <label for="year-{{ movie.year }}" class="span editContent" >{{ movie.year }}</label>
+                <li class="editContent form-check" >
+                    <input type="checkbox" class="checked form-check-input" name="year" id="year-{{ movie.year }}" value="{{ movie.year }}">
+                    <label for="year-{{ movie.year }}" class="span editContent form-check-label" >{{ movie.year }}</label>
                 </li>
             {% endfor %}
         </ul>
     </div>
-    <button type="submit">Найти</button>
+    <button type="submit" class="btn btn-primary">Найти</button>
 </form>
 <!-- //discounts -->
 <!-- reviews -->
@@ -42,7 +42,7 @@
     <h3 class="sear-head editContent" >Рейтинг</h3>
     <ul class="w3layouts-box-list">
         <li>
-            <a href="#">
+            <a href="/filter/?rating=5">
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
@@ -52,7 +52,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/filter/?rating=4">
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
@@ -62,17 +62,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <span class="fa fa-star" aria-hidden="true" ></span>
-                <span class="fa fa-star" aria-hidden="true" ></span>
-                <span class="fa fa-star" aria-hidden="true" ></span>
-                <span class="fa fa-star-half-o" aria-hidden="true" ></span>
-                <span class="fa fa-star-o" aria-hidden="true" ></span>
-                <span class="editContent" >3.5</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
+            <a href="/filter/?rating=3">
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
                 <span class="fa fa-star" aria-hidden="true"></span>
@@ -82,13 +72,13 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/filter/?rating=2">
                 <span class="fa fa-star" aria-hidden="true"></span>
                 <span class="fa fa-star" aria-hidden="true" ></span>
-                <span class="fa fa-star-half-o" aria-hidden="true" ></span>
                 <span class="fa fa-star-o" aria-hidden="true" ></span>
                 <span class="fa fa-star-o" aria-hidden="true" ></span>
-                <span class="editContent" >2.5</span>
+                <span class="fa fa-star-o" aria-hidden="true" ></span>
+                <span class="editContent" >2.0</span>
             </a>
         </li>
     </ul>

@@ -853,12 +853,6 @@ ul.w3layouts-box-list li {
 }
 
 .grid-img-right {
-    background: url(../images/single.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
     position: relative;
     height: 15em;
     padding: 5.5em 2em 0 0;
@@ -869,15 +863,15 @@ ul.w3layouts-box-list li {
     display: block;
 }
 
-.grid-img-right a {
-    font-size: 0.9em;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    padding: 0;
+/*.grid-img-right a {*/
+/*    font-size: 0.9em;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 600;*/
+/*    text-decoration: none;*/
+/*    color: #fff;*/
+/*    padding: 0;*/
 
-}
+/*}*/
 
 .desc1-left {
     border: 1px solid #ddd;

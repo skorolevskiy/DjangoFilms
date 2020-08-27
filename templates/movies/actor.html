@@ -21,16 +21,16 @@
                 </h3>
                 <h5 class="editContent"></h5>
                 <ul>
-                    <li>
+                    <li style="list-style: none">
                         <span><b>Возраст:</b> {{ actor.age }} лет</span></li>
-                    <li>
+                    <li style="list-style: none">
                         <span><b>Режиссер:</b>
                             {% for movie in actor.film_director.all %}
                                 <a href="{{ movie.get_absolute_url }}">{{ movie.title }}{% if not forloop.last %}, {% else %}{% endif %}</a>
                             {% endfor %}
                         </span>
                     </li>
-                    <li><span><b>Актер:</b>
+                    <li style="list-style: none"><span><b>Актер:</b>
                         {% for movie in actor.film_actor.all %}
                             <a href="{{ movie.get_absolute_url }}">{{ movie.title }}{% if not forloop.last %}, {% else %}{% endif %}</a>
                         {% endfor %}

@@ -2,10 +2,6 @@
 {% load static recaptcha3 %}
 
 {% block title %} {{ movie.title }} {% endblock title %}
-{% block recapture %}
-    {% recaptcha_init %}
-    {% recaptcha_ready action_name="homepage" %}
-{% endblock %}
 
 {% block container %}
     <div class="container py-md-3">
